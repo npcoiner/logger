@@ -1,6 +1,12 @@
 {
-
 "name": "logger",
+"verson": "0.1.0",
 "type": "module",
-"license": "MIT"
+"license": "MIT",
+"author" : "npcoiner",
+"repository" : "https://github.com/npcoiner/logger",
+"keywords": ["log", "logger", "debug"],
+"scripts": {
+	"test": "node test.js"
+	}
 }
