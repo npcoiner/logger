@@ -1,5 +1,6 @@
 {
 
 "name": "logger",
-"type": "module"
+"type": "module",
+"license": "MIT"
 }
