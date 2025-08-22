@@ -6,4 +6,4 @@ test();
 
 
 let logger = new log();
-logger.info("Yo", {});
+logger.info("Yo");
