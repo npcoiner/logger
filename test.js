@@ -1,5 +1,9 @@
-import { logger } from "./logger.js";
+import { test, log } from "./logger.js";
 
 
 
-logger();
+test();
+
+
+let logger = new log();
+logger.info("Yo", {});
