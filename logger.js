@@ -30,27 +30,27 @@ export class log {
 		}
 	}
 	debug(message, obj) {
-		if (getLevelValue(this.level) >= getLevelValue("DEBUG")) {
+		if (getLevelValue(this.level) <= getLevelValue("DEBUG")) {
 			this.output("DEBUG", message, obj);
 		}
 	}
 	info(message, obj) {
-		if (getLevelValue(this.level) >= getLevelValue("INFO")) {
+		if (getLevelValue(this.level) <= getLevelValue("INFO")) {
 			this.output("INFO", message, obj);
 		}
 	}
 	warn(message, obj) {
-		if (getLevelValue(this.level) >= getLevelValue("WARN")) {
+		if (getLevelValue(this.level) <= getLevelValue("WARN")) {
 			this.output("WARN", message, obj);
 		}
 	}
 	error(message, obj) {
-		if (getLevelValue(this.level) >= getLevelValue("ERROR")) {
+		if (getLevelValue(this.level) <= getLevelValue("ERROR")) {
 			this.output("ERROR", message, obj);
 		}
 	}
 	fatal(message, obj) {
-		if (getLevelValue(this.level) >= getLevelValue("FATAL")) {
+		if (getLevelValue(this.level) <= getLevelValue("FATAL")) {
 			this.output("FATAL", message, obj);
 		}
 	}
