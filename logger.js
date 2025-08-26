@@ -24,7 +24,7 @@ export class log {
 					console.log(level, message, obj);
 					break;
 				default:
-					console.log(x, "FATAL LOGGING ERROR: No output specified");
+					console.log(x, "LOGGING ERROR: No output specified");
 					break;
 			}
 		}
