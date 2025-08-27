@@ -1,3 +1,6 @@
+import { writeFile } from "fs";
+
+
 export function test() {
 	console.log("hello world");
 }
@@ -11,17 +14,26 @@ const LEVELS = {
 }
 export class log {
 
-	constructor(level = "INFO", outputs = ["console"]) {
+	constructor(level = "INFO", outputs = ["console"], file = "output.log") {
 		this.level = level;
 		this.outputs = outputs;
+		this.file = file;
 	}
-	output(level, message, obj = "") {
+	output(level, message, obj = {}) {
 		for (let i = 0; i < this.outputs.length; i++) {
 			let x = this.outputs[i];
 
 			switch (x) {
 				case "console":
 					console.log(level, message, obj);
+					break;
+				case "file":
+					obj["message"] = message;
+					writeFile(this.file, JSON.stringify(obj), (err) => {
+						if (err) {
+							console.error("LOGGING ERROR: Failed to write to file")
+						}
+					});
 					break;
 				default:
 					console.log(x, "LOGGING ERROR: No output specified");
